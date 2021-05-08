@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Base</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      if (typeof module === "object") {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (window.module) module = window.module;
+    </script>
+  </head>
+  <body>
+    <div class="title-bar">
+      <div class="title-bar-controls-container">
+        <ul class="title-bar-controls-wrapper">
+          <li class="title-bar-control">File</li>
+          <li class="title-bar-control">Edit</li>
+          <li class="title-bar-control">About</li>
+          <li class="title-bar-control">Preferences</li>
+        </ul>
+      </div>
+      <div class="window-buttons-container">
+        <img
+          class="window-button"
+          onclick="minimizeWindow()"
+          src="img/minimize.svg"
+        />
+        <img
+          class="window-button window-button-resize"
+          onclick="toggleWindowSize()"
+          src="img/maximize.svg"
+        />
+        <img
+          class="window-button window-button-close"
+          onclick="closeWindow()"
+          src="img/close.svg"
+        />
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="sidebar-container">
+        <div class="sidebar-text">RougeTools</div>
+        <div class="sidebar-text sidebar-text-active">README.md</div>
+        <div class="sidebar-text">src</div>
+        <div class="sidebar-text">- index.js</div>
+        <div class="sidebar-text">- views</div>
+        <div class="sidebar-text">-- index.ejs</div>
+        <div class="sidebar-text">package.json</div>
+      </div>
+      <div class="editor-container">
+        <textarea class="editor" spellcheck="false"></textarea>
+        <div class="editor-details-container">
+          <div class="percent-bar-container">
+            <p>
+              0% <span class="percent-bar percent-bar-active">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span
+              ><span class="percent-bar">|</span> 100%
+            </p>
+          </div>
+          <div class="last-save-container">
+            <p>last save - 3 mins ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js" async defer></script>
+    <script src="js/editor.js" async defer></script>
+  </body>
+</html>
