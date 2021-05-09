@@ -29,6 +29,14 @@ p {
   line-height: 2;
 }
 
+a {
+  color: rgb(59, 154, 168);
+}
+
+a:visited {
+  color: rgb(59, 154, 168);
+}
+
 .banner-container {
   display: flex;
   align-items: center;
