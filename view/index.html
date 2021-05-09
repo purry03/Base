@@ -37,43 +37,121 @@
     <div class="title-bar">
       <div class="title-bar-controls-container">
         <ul class="title-bar-controls-wrapper">
-          <li class="title-bar-control">File</li>
-          <li class="title-bar-control">Edit</li>
-          <li class="title-bar-control">About</li>
-          <li class="title-bar-control">Preferences</li>
+          <li class="title-bar-control">
+            <div class="title-bar-control-heading">File</div>
+            <div class="title-bar-dropdown">
+              <div class="title-bar-dropdown-content">
+                New
+                <div class="title-bar-dropdown-shortcut">ctrl + n</div>
+              </div>
+              <div class="title-bar-dropdown-content" onclick="openFile()">
+                Open
+                <div class="title-bar-dropdown-shortcut">ctrl + o</div>
+              </div>
+              <hr />
+              <div class="title-bar-dropdown-content" onclick="saveFile()">
+                Save
+                <div class="title-bar-dropdown-shortcut">ctrl + s</div>
+              </div>
+              <div class="title-bar-dropdown-content">
+                Save As...
+                <div class="title-bar-dropdown-shortcut">ctrl + shift + s</div>
+              </div>
+              <hr />
+              <div class="title-bar-dropdown-content">
+                Exit
+                <div class="title-bar-dropdown-shortcut">ctrl + q</div>
+              </div>
+            </div>
+          </li>
+          <li class="title-bar-control">
+            <div class="title-bar-control-heading">Edit</div>
+            <div class="title-bar-dropdown">
+              <div class="title-bar-dropdown-content">
+                Undo
+                <div class="title-bar-dropdown-shortcut">ctrl + z</div>
+              </div>
+              <div class="title-bar-dropdown-content">
+                Redo
+                <div class="title-bar-dropdown-shortcut">ctrl + y</div>
+              </div>
+              <hr />
+              <div class="title-bar-dropdown-content">
+                Cut
+                <div class="title-bar-dropdown-shortcut">ctrl + x</div>
+              </div>
+              <div class="title-bar-dropdown-content">
+                Copy
+                <div class="title-bar-dropdown-shortcut">ctrl + c</div>
+              </div>
+              <div class="title-bar-dropdown-content">
+                Paste
+                <div class="title-bar-dropdown-shortcut">ctrl + v</div>
+              </div>
+              <hr />
+              <div class="title-bar-dropdown-content">Delete</div>
+              <div class="title-bar-dropdown-content">
+                Select All
+                <div class="title-bar-dropdown-shortcut">ctrl + a</div>
+              </div>
+            </div>
+          </li>
+          <li class="title-bar-control">
+            <div class="title-bar-control-heading">Preferences</div>
+            <div class="title-bar-dropdown">
+              <div class="title-bar-dropdown-content">Undo</div>
+              <div class="title-bar-dropdown-content">Redo</div>
+              <div class="title-bar-dropdown-content">Cut</div>
+              <div class="title-bar-dropdown-content">Copy</div>
+              <div class="title-bar-dropdown-content">Paste</div>
+            </div>
+          </li>
+          <li class="title-bar-control">
+            <div class="title-bar-control-heading">About</div>
+            <div class="title-bar-dropdown">
+              <div class="title-bar-dropdown-content">New</div>
+              <div class="title-bar-dropdown-content">Open</div>
+              <hr />
+              <div class="title-bar-dropdown-content">Save</div>
+              <div class="title-bar-dropdown-content">Save As...</div>
+              <hr />
+              <div class="title-bar-dropdown-content">Exit</div>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="window-buttons-container">
         <img
           class="window-button"
           onclick="minimizeWindow()"
-          src="img/minimize.svg"
+          src="img/minimize.png"
         />
         <img
           class="window-button window-button-resize"
           onclick="toggleWindowSize()"
-          src="img/maximize.svg"
+          src="img/maximize.png"
         />
         <img
           class="window-button window-button-close"
           onclick="closeWindow()"
-          src="img/close.svg"
+          src="img/close.png"
         />
       </div>
     </div>
 
     <div class="main-container">
       <div class="sidebar-container">
-        <div class="sidebar-text">RougeTools</div>
-        <div class="sidebar-text sidebar-text-active">README.md</div>
-        <div class="sidebar-text">src</div>
-        <div class="sidebar-text">- index.js</div>
-        <div class="sidebar-text">- views</div>
-        <div class="sidebar-text">-- index.ejs</div>
-        <div class="sidebar-text">package.json</div>
+        <!-- <div class="sidebar-text sidebar-text-active sidebar-text-unsaved">
+          README.md
+        </div> -->
       </div>
       <div class="editor-container">
-        <textarea class="editor" spellcheck="false"></textarea>
+        <textarea
+          class="editor"
+          id="editor"
+          spellcheck="false"
+          placeholder="Type here ..."
+        ></textarea>
         <div class="editor-details-container">
           <div class="percent-bar-container">
             <p>
@@ -98,6 +176,9 @@
     </div>
 
     <script src="js/index.js" async defer></script>
+    <script src="js/titlebar.js" async defer></script>
+    <script src="js/file.js" async defer></script>
+    <script src="js/sidebar.js" async defer></script>
     <script src="js/editor.js" async defer></script>
   </body>
 </html>

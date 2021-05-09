@@ -3,9 +3,9 @@ const remote = electron.remote;
 
 remote.getCurrentWindow().on("resize", function () {
   if (remote.getCurrentWindow().isMaximized()) {
-    $(".window-button-resize").attr("src", "img/resize.svg");
+    $(".window-button-resize").attr("src", "img/resize.png");
   } else {
-    $(".window-button-resize").attr("src", "img/maximize.svg");
+    $(".window-button-resize").attr("src", "img/maximize.png");
   }
 });
 
