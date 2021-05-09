@@ -1,5 +1,5 @@
 :root {
-  --accent: #a8ddcd;
+  --accent: #eb4d4d;
   --foreground: #ddd;
   --primary: #202020;
   --title-bar: #1c1c1c;
@@ -20,11 +20,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
   background-color: var(--primary);
   color: var(--foreground);
+  overflow-x: hidden;
+  transition: background-color 0.2s;
 }
 
 ::-webkit-scrollbar {
@@ -108,7 +111,6 @@ body {
   transform: translateY(-1px);
   height: fit-content;
   width: 250px;
-  padding: 10px 0;
   background-color: var(--foreground);
   visibility: hidden;
   z-index: 999;
@@ -150,14 +152,16 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(0, -50%);
+  transform: translate(0%, -50%);
   display: flex;
   align-items: center;
   height: 100%;
+  width: 90px;
 }
 
 .window-button {
   height: 100%;
+  width: 33%;
   padding: 5px 10px;
   transition: background-color 0.25s;
   -webkit-app-region: no-drag;
@@ -168,7 +172,7 @@ body {
 }
 
 .window-button-close:hover {
-  background-color: #e44848;
+  background-color: var(--accent);
 }
 
 .main-container {
@@ -201,7 +205,7 @@ body {
 }
 
 .sidebar-text-active {
-  color: #e44848;
+  color: #eb4d4d;
 }
 
 .sidebar-text-active:hover {
@@ -210,7 +214,7 @@ body {
 
 /* .sidebar-text-active::after {
   content: "  <";
-  color: #e44848;
+  color: var(--accent);
 } */
 
 .sidebar-text-unsaved::before {
@@ -234,10 +238,11 @@ body {
   border: none;
   outline: none;
   resize: none;
+  user-select: text;
 }
 
 .editor::selection {
-  background-color: #e44848;
+  background-color: var(--accent);
   color: #ddd;
 }
 
@@ -259,8 +264,8 @@ body {
 }
 
 .percent-bar-active {
-  color: #e44848;
-  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .last-save-container {

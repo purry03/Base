@@ -99,11 +99,9 @@
           <li class="title-bar-control">
             <div class="title-bar-control-heading">Preferences</div>
             <div class="title-bar-dropdown">
-              <div class="title-bar-dropdown-content">Undo</div>
-              <div class="title-bar-dropdown-content">Redo</div>
-              <div class="title-bar-dropdown-content">Cut</div>
-              <div class="title-bar-dropdown-content">Copy</div>
-              <div class="title-bar-dropdown-content">Paste</div>
+              <div class="title-bar-dropdown-content" onclick="switchTheme()">
+                Switch Theme
+              </div>
             </div>
           </li>
           <li class="title-bar-control">
@@ -155,8 +153,8 @@
         <div class="editor-details-container">
           <div class="percent-bar-container">
             <p>
-              0% <span class="percent-bar percent-bar-active">|</span
-              ><span class="percent-bar">|</span
+              <span class="current-scroll-percent">0%</span>
+              <span class="percent-bar">|</span
               ><span class="percent-bar">|</span
               ><span class="percent-bar">|</span
               ><span class="percent-bar">|</span
@@ -175,10 +173,12 @@
       </div>
     </div>
 
-    <script src="js/index.js" async defer></script>
-    <script src="js/titlebar.js" async defer></script>
-    <script src="js/file.js" async defer></script>
-    <script src="js/sidebar.js" async defer></script>
-    <script src="js/editor.js" async defer></script>
+    <script src="js/index.js"></script>
+    <script src="js/titlebar.js"></script>
+    <script src="js/file.js"></script>
+    <script src="js/preferences.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/details.js"></script>
   </body>
 </html>

@@ -4,12 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder bin",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.base.editor",
+    "win": {
+      "publisherName": "Trinity InfoSystem",
+      "publish": [
+        "github"
+      ],
+      "target": [
+        "nsis"
+      ]
+    }
   },
   "keywords": [],
   "author": "purry03 <rohansh.lko@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^12.0.6"
+    "electron": "^12.0.6",
+    "electron-builder": "^22.11.1"
   }
 }
