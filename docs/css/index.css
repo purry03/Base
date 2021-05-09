@@ -8,7 +8,10 @@
 }
 
 body {
+  overflow-x: hidden;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
   font-family: "JetBrains Mono", monospace;
   background-color: var(--primary);
   padding: 30px 50px;
@@ -27,6 +30,7 @@ h2 {
 
 p {
   line-height: 2;
+  text-align: justify;
 }
 
 a {
@@ -64,7 +68,8 @@ a:visited {
 
 .roadmap-container {
   width: 100%;
-  padding: 50px;
+  padding: 0 50px;
+  padding-bottom: 0;
 }
 
 .roadmap {
@@ -116,4 +121,64 @@ a:visited {
 
 .about-container {
   padding: 50px;
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+    padding: 0 5px;
+  }
+
+  pre {
+    font-size: 0.75rem;
+    margin: 0 auto;
+    width: 99%;
+  }
+
+  .banner-container {
+    text-align: center;
+    height: 60px;
+    width: 100%;
+  }
+
+  .banner-container img {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .banner-heading {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .main-text-container {
+    width: 100%;
+    padding: 50px 10px;
+  }
+
+  .main-text-container {
+    padding-top: 25px;
+  }
+
+  .roadmap-container,
+  .about-container {
+    padding: 0 10px;
+  }
+
+  .roadmap {
+    padding-left: 10px;
+  }
+
+  .milestone {
+    font-size: 0.8rem;
+  }
 }
