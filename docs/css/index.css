@@ -18,7 +18,10 @@ body {
 }
 
 body {
-  background-color: var(--color-1);
+  background: url(../img/star-bg.svg), var(--color-1);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   overflow-x: hidden;
 }
 
