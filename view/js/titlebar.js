@@ -31,10 +31,11 @@ $(document).on("mouseover", ".title-bar-control", function (e) {
 });
 
 function collapseAllDropdowns() {
-  $(".title-bar-control-heading-active").removeClass(
-    ".title-bar-control-heading-active"
-  );
-  $(".title-bar-control")
-    .find(".title-bar-dropdown")
-    .css("visibility", "hidden");
+  $(".title-bar-control").each(function () {
+    $(this)
+      .find(".title-bar-dropdown")
+      .each(function () {
+        $(this).css("visibility", "hidden");
+      });
+  });
 }

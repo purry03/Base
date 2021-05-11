@@ -1,6 +1,7 @@
 var isDark = true;
 
 function switchTheme() {
+  collapseAllDropdowns();
   if (isDark) {
     isDark = false;
     $(":root").css("--foreground", "#333");

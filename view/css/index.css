@@ -260,7 +260,9 @@ body {
 .percent-bar-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  width: 200px;
 }
 
 .percent-bar-active {

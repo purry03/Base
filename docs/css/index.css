@@ -1,202 +1,163 @@
 :root {
-  --primary: #ddd;
-  --foreground: #333;
+  --color-1: #1b1717;
+  --color-2: #e84545;
+  --color-3: #903749;
+  --color-4: #53354a;
+  --foreground: #ddd;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  overflow-x: hidden;
   height: 100%;
-  width: 100%;
-  max-width: 100%;
-  font-family: "JetBrains Mono", monospace;
-  background-color: var(--primary);
-  padding: 30px 50px;
 }
 
-pre {
-  padding: 15px 0;
-  background-color: var(--foreground);
-  color: var(--primary);
-  font-family: monospace;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  line-height: 2;
-  text-align: justify;
+body {
+  background-color: var(--color-1);
+  overflow-x: hidden;
 }
 
 a {
-  color: rgb(59, 154, 168);
+  color: inherit;
+  text-decoration: none;
 }
 
-a:visited {
-  color: rgb(59, 154, 168);
+h1,
+h4,
+p {
+  letter-spacing: 0.075rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1 {
+  color: var(--color-2);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 0 50px;
+  background-color: var(--color-2);
+}
+
+.nav-heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  color: var(--foreground);
+}
+
+.nav-list {
+  margin-left: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--foreground);
+  list-style: none;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .banner-container {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100px;
+  height: 90%;
   width: 100%;
 }
 
-.logo-img {
-  height: 100%;
+.banner-container img {
+  height: 90%;
+  transform: translateX(70%);
 }
 
-.banner-heading {
-  display: inline-block;
-  height: 100%;
-  margin-right: 50px;
-  font-size: 5rem;
+.banner-text-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 450px;
 }
 
-.main-text-container {
+.banner-text-container h4 {
   color: var(--foreground);
-  padding: 0 50px;
+  font-size: 0.9rem;
+  font-weight: 300;
   line-height: 2;
 }
 
-.screenshot-container {
-  padding: 0 50px;
+.feature-container {
+  margin-top: 100px;
 }
 
-.screenshot {
-  height: auto;
-  width: 66%;
-  margin: 25px 0;
-  border: 1px solid var(--foreground);
-}
-
-.roadmap-container {
-  width: 100%;
-  padding: 0 50px;
-  padding-bottom: 0;
-}
-
-.roadmap {
-  padding: 10px 0;
+.feature-container h1 {
   text-align: center;
+  margin-bottom: 100px;
 }
 
-.milestone {
+.feature {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.feature-heading {
+  color: var(--color-2);
+  margin: 25px 0;
+}
+
+.feature-text {
+  font-size: 0.85rem;
+  color: var(--foreground);
+}
+
+.install-container {
+  margin: 100px 0;
+}
+
+.install-container h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.install {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   width: 100%;
-  margin: 38px auto;
+  padding: 100px 0;
+  text-align: center;
+  color: var(--foreground);
+  font-family: "JetBrains Mono", monospace;
 }
 
-.milestone-dot {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  margin-right: 20px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--foreground);
-  border-radius: 500px;
+.install h4 {
+  margin: 25px;
 }
 
-.milestone-dot-completed {
-  background-color: var(--foreground);
+.btn {
+  padding: 10px 20px;
+  background-color: var(--color-2);
+  color: var(--foreground);
+  border: none;
+  outline: none;
 }
 
-.milestone-connecter-up {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 20px;
-  background-color: var(--foreground);
+.latest-release {
+  margin-right: 33%;
 }
 
-.milestone-connecter-down {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 20px;
-  background-color: var(--foreground);
-}
-
-.about-container {
-  padding: 50px;
-  padding: 0 50px;
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 0;
-    padding-bottom: 50px;
-    overflow-x: hidden;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.75rem;
-    padding: 0 5px;
-  }
-
-  pre {
-    font-size: 0.75rem;
-    margin: 0 auto;
-    width: 99%;
-  }
-
-  .banner-container {
-    text-align: center;
-    height: 60px;
-    width: 100%;
-  }
-
-  .banner-container img {
-    position: absolute;
-    visibility: hidden;
-  }
-
-  .banner-heading {
-    font-size: 3rem;
-    margin: 0;
-  }
-
-  .main-text-container {
-    width: 100%;
-    padding: 50px 10px;
-  }
-
-  .main-text-container {
-    padding-top: 25px;
-  }
-
-  .roadmap-container,
-  .about-container,
-  .screenshot-container {
-    padding: 0 10px;
-  }
-
-  .screenshot {
-    width: 100%;
-  }
-
-  .roadmap {
-    padding-left: 10px;
-  }
-
-  .milestone {
-    font-size: 0.8rem;
-  }
+.manual-download h3 {
+  color: var(--foreground);
+  text-decoration: underline;
 }
